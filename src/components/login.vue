@@ -22,10 +22,25 @@
         </el-form-item>
       </el-form>
     </div>
+    <canvas class="background"></canvas>
   </div>
 </template>
 
 <script>
+import Particles from '../particles.js-master_setted/dist/particles.min'
+//这是粒子特效的导入
+window.onload = function() {
+  Particles.init({
+    selector: '.background',
+    maxParticles: 150,
+    minDistance:80,
+    sizeVariations:6,
+    color:'#3e8d7d',
+    speed:0.7,
+    connectParticles:
+        true,
+
+  })}
 export default { //export default是复用组件时用到的，将它export出来才能在其他地方import
   data(){
     return{
@@ -68,6 +83,16 @@ export default { //export default是复用组件时用到的，将它export出�
 
 <style lang="less" scoped>/*scoped是vue的指令，用来控制组件的生效区间，加上scoped，样式只在当前组件内生效，从而防止组件之间的样式冲突*/
 //加上lang="less"就可以使用less相关语法，如语法嵌套等，不过需要去ui中添加less-loader和less开发依赖
+//这是画布的样式设置
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  //background-image: url("cool-background.png");
+  //background-size: 100%;
+}
 .login_container{
   //background-color:#2b4b6b;
   background-image: url("../assets/background.png");
@@ -83,6 +108,7 @@ export default { //export default是复用组件时用到的，将它export出�
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
+  z-index: 1;
   /*这一行的指令是向左上各移动自身宽高的50%，因为上面设置的left是50%意味着盒子的最左边距离边界50%，再向左移动自身的50%就可以在正中间了*/
 .avatar_box{ /*less的语法嵌套*/
   height: 130px;
