@@ -17,6 +17,10 @@ import { Container,Header,Aside,Main,
     Pagination,
     Dialog,
     MessageBox,
+    Tag,
+    Tree,
+    Select,
+    Option,
 } from "element-ui";
 
 
@@ -42,6 +46,10 @@ Vue.use(Switch)
 Vue.use(Tooltip)
 Vue.use(Pagination)
 Vue.use(Dialog)
+Vue.use(Tag)
+Vue.use(Tree)
+Vue.use(Select)
+Vue.use(Option)
 
 
 Vue.prototype.$message=Message //这个组件必须在Vue全局挂载，$message的名字不要求，合法就行，但是后面必须是Message

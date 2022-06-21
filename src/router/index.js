@@ -4,6 +4,8 @@ import login from '../components/login' //因为是上一层目录的所以前�
 import home from "@/components/home";
 import welcome from "@/components/welcome";
 import users from "@/components/user/users";
+import rights from "@/components/power/rights";
+import roles from "@/components/power/roles";
 
 Vue.use(VueRouter)
 
@@ -22,7 +24,9 @@ const routes = [ //这是放路由规则对象的
     redirect: './welcome',
     children:[
       {path:'/welcome',component:welcome},
-      {path: '/users',component: users}
+      {path: '/users',component: users},
+      {path:'/rights',component: rights},
+      {path:'/roles',component: roles}
     ]
   }
 ]

@@ -3,6 +3,7 @@ html,body,#app{
     height:100%; /*占满屏幕*/
     margin: 0;
     padding: 0;  /*重置为0*/
+    min-width: 1366px;/*添加最小宽度防止屏幕大小不够时将东西挤到下一行*/
 
 }
 .el-breadcrumb{
